@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.3",
+    "@babel/traverse": "^7.29.0",
+    "@babel/types": "^7.29.0",
+    "axios": "^1.7.0",
+    "chokidar": "^4.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "glob": "^10.3.0",
+    "node-cache": "^5.1.2",
+    "recast": "^0.23.11",
+    "simple-git": "^3.22.0",
+    "uuid": "^9.0.0",
+    "ws": "^8.21.0"
+  }
+}

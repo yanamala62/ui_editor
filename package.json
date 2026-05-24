@@ -1,0 +1,29 @@
+{
+  "name": "uilens",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "electron",
+    "observer-engine",
+    "ast-engine",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n \"SERVER,CLIENT,ELECTRON\" -c \"blue,green,magenta\" \"npm run server:dev\" \"npm run client:dev\" \"npm run electron:dev\"",
+    "server:dev": "cd server && node index.js",
+    "client:dev": "cd client && npx vite",
+    "electron:dev": "wait-on http://localhost:5173 http://localhost:3001 && cd electron && npx electron .",
+    "build": "cd client && npx vite build",
+    "electron:build": "npm run build && cd electron && npx electron-builder",
+    "clean": "taskkill /f /im node.exe /t 2>nul || exit 0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "wait-on": "^9.0.10"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
