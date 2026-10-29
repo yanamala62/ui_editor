@@ -17,4 +17,6 @@ const WS_EVENTS = {
 
 const LOG_LEVELS = { INFO: 'INFO', ERROR: 'ERROR', WARN: 'WARN', EVENT: 'EVENT', AI: 'AI', SAVE: 'SAVE' };
 
+// Export constants for use in other modules
+
 module.exports = { FRAMEWORKS, WS_EVENTS, LOG_LEVELS };
